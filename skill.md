@@ -1,6 +1,6 @@
 ---
 name: vatos-design-system
-description: VATOS 문서, 발표자료, 보고서, 제안서, 웹 콘텐츠, Markdown, HTML 산출물 작성 시 VATOS Design System 기준을 적용하는 스킬입니다. DESIGN.md와 README.md를 우선 참고하고, 공식 로고는 assets/logos/ 하위 자산만 사용합니다.
+description: VATOS 문서, 발표자료, 보고서, 제안서, 웹 콘텐츠, Markdown, HTML, PPT 산출물 작성 시 VATOS Design System과 산출물 유형별 specs 기준을 적용하는 스킬입니다. 문서 유형별 작성 규격은 specs/를 우선 참고하고, 공통 디자인 기준은 DESIGN.md를 따릅니다.
 ---
 
 # VATOS Design System Skill
@@ -15,27 +15,50 @@ description: VATOS 문서, 발표자료, 보고서, 제안서, 웹 콘텐츠, Ma
 vatos-design-system/
 ├─ README.md
 ├─ DESIGN.md
-└─ assets/
-   └─ logos/
-      ├─ CI_VATOS_logo_signature_slogan.png
-      ├─ CI_VATOS_logo_symbol_wordmark.png
-      ├─ CI_VATOS_wordmark_only.png
-      ├─ CI_VATOS_symbol_only.png
-      └─ CI_VATOS_dark_signature_slogan.png
+├─ skill.md
+├─ assets/
+│  └─ logos/
+│     ├─ CI_VATOS_logo_signature_slogan.png
+│     ├─ CI_VATOS_logo_symbol_wordmark.png
+│     ├─ CI_VATOS_wordmark_only.png
+│     ├─ CI_VATOS_symbol_only.png
+│     └─ CI_VATOS_dark_signature_slogan.png
+├─ specs/
+│  ├─ ppt-base.md
+│  └─ word-base.md
+├─ references/
+│  └─ ref_layout_ppt.pptx
+└─ examples/
+   └─ HTML 예시 파일
 ```
+
+### Reference Usage Notes
+
+- PPT 또는 발표자료 작업은 `specs/ppt-base.md`를 우선 참고한다.
+- Word 또는 일반 문서 작업은 `specs/word-base.md`를 우선 참고한다.
+- PPT 레이아웃, 마스터 슬라이드 용어, 요소 위치, 정렬감, 여백감은 `references/ref_layout_ppt.pptx`를 참고한다.
+- `references/ref_layout_ppt.pptx`는 내용 작성용 원본이 아니라, 레이아웃과 위치를 확인하기 위한 디자인 참고 파일이다.
+- HTML 문서, 웹형 보고서, 시각화 예시가 필요한 경우 파일명을 특정하지 말고 `examples/` 폴더의 예시들을 함께 참고한다.
 
 ## Priority
 
 VATOS 산출물을 생성하거나 수정할 때 판단 우선순위는 다음과 같다.
 
 1. 사용자가 제공한 원문 내용과 명시 요청
-2. `DESIGN.md`
-3. `assets/logos/`에 보관된 VATOS 공식 로고 자산
-4. 사용자가 제공한 이미지, 아이콘, 템플릿 자산
-5. `README.md`에 정의된 사용 방법과 운영 기준
-6. 문서 유형별 목적과 독자
+2. 산출물 유형별 규격 파일: `specs/`
+3. 공통 디자인 기준: `DESIGN.md`
+4. 공식 로고 및 이미지 자산: `assets/`
+5. 참고 레이아웃 자료: `references/`
+6. HTML/웹형 문서 참고 예시: `examples/`
+7. 운영 안내: `README.md`
+7. 문서 유형별 목적과 독자
 
-사용자가 명시한 요청이 있으면 해당 요청을 우선하되, 가능한 범위 안에서 VATOS Design System과 충돌하지 않도록 조정한다.
+PPT 또는 발표자료를 작성할 때는 반드시 `specs/ppt-base.md`를 우선 적용한다.  
+PPT의 레이아웃, 위치, 정렬감, 마스터 슬라이드 용어는 `references/ref_layout_ppt.pptx`를 참고한다.  
+HTML 문서, 웹형 보고서, 시각화 자료를 작성할 때는 `examples/` 폴더의 예시들을 함께 참고한다.  
+Word 또는 일반 문서 산출물을 작성할 때는 `specs/word-base.md`를 우선 적용한다.
+
+해당 산출물 유형의 규격 파일이 비어 있거나 없는 경우에는 `DESIGN.md`와 사용자의 명시 요청을 기준으로 작성한다.
 
 ## Core Design Direction
 
@@ -145,7 +168,7 @@ PPT, Word, Excel, HTML 등 수정 가능한 산출물에서는 로고와 원본 
 1. 문서 목적과 대상 독자를 파악한다.
 2. 원문 내용과 필수 반영 정보를 확인한다.
 3. 산출물 형식에 맞는 구조를 제안한다.
-4. `DESIGN.md` 기준에 맞춰 컬러, 타이포그래피, 레이아웃, 컴포넌트를 적용한다.
+4. PPT는 `specs/ppt-base.md`, Word는 `specs/word-base.md`를 우선 확인하고, HTML/웹형 문서는 `examples/` 폴더의 예시들을 함께 참고한 뒤 `DESIGN.md` 기준에 맞춰 컬러, 타이포그래피, 레이아웃, 컴포넌트를 적용한다.
 5. 원문에 없는 내용은 임의로 추가하지 않는다.
 6. 필요한 경우 사용자가 확인할 수 있는 시각화 예시나 대안을 먼저 제시한다.
 7. 최종 산출 전 원문 정확성, 보안, 저작권, 브랜드 기준을 검토한다.
@@ -211,7 +234,9 @@ HTML 문서를 작성할 때는 아래 규칙을 따른다.
 
 ### 4. PPT / Presentation Rules
 
-PPT 또는 발표자료를 요청받은 경우, 먼저 슬라이드 구조를 작성한다.
+PPT 또는 발표자료를 요청받은 경우, 먼저 산출물 목적과 슬라이드 구조를 정리한다.  
+PPT 작성 시에는 `specs/ppt-base.md`를 우선 적용하고, 공통 디자인 기준은 `DESIGN.md`를 따른다.
+레이아웃, 위치, 마스터 슬라이드 용어, 요소 간 여백감은 `references/ref_layout_ppt.pptx`를 참고한다.
 
 슬라이드 작성 기본 순서:
 
@@ -236,6 +261,8 @@ PPT 초안을 Markdown으로 작성할 때는 아래 형식을 따른다.
 - 주요 요소:
 - 사용할 로고:
 - 컬러 테마:
+- 적용 규격: specs/ppt-base.md
+- 참고 레이아웃: references/ref_layout_ppt.pptx
 
 ## 본문 내용
 - ...
@@ -243,14 +270,33 @@ PPT 초안을 Markdown으로 작성할 때는 아래 형식을 따른다.
 
 PPT 디자인을 직접 생성할 때는 다음을 지킨다.
 
+- `specs/ppt-base.md`를 우선 적용한다.
+- 레이아웃, 위치, 정렬감, 마스터 슬라이드 용어는 `references/ref_layout_ppt.pptx`를 참고한다.
+- 기본 슬라이드 비율은 16:9를 기준으로 한다.
 - 슬라이드 하나에는 하나의 핵심 메시지만 담는다.
+- 주요 콘텐츠는 슬라이드 중앙 안전 영역 안에 배치한다.
+- 콘텐츠 그룹 전체가 좌측 또는 우측으로 치우쳐 보이지 않도록 한다.
+- 좌측 정렬 텍스트를 사용하더라도 콘텐츠 블록 전체는 중앙 안전 영역 안에 있어야 한다.
+- 표, 카드, 차트, 다이어그램은 슬라이드 중앙축을 기준으로 균형 있게 배치한다.
+- 배경 장식, 사선 레이어, 로고 위치를 기준으로 본문 콘텐츠를 정렬하지 않는다.
+- 표지와 섹션 구분 슬라이드는 비대칭 구성이 가능하지만, 의도된 디자인이어야 한다.
 - 표, 카드, 다이어그램은 수정 가능한 구조를 우선한다.
 - 슬라이드 전체를 통이미지로 만들지 않는다.
 - 텍스트는 텍스트로 유지한다.
 - 표는 편집 가능한 표 또는 도형/텍스트 조합으로 구성한다.
 - 로고, 사진, 스크린샷만 이미지로 사용한다.
 
-### 5. Table Stability Rules
+### 5. Word / Document Rules
+
+Word 또는 일반 문서 산출물을 요청받은 경우 `specs/word-base.md`를 우선 참고한다.  
+공통 브랜드 컬러, 로고, 타이포그래피, 디자인 톤, 표 정렬, 수정 가능성 원칙은 `DESIGN.md`를 따른다.
+
+- Word 문서는 표지, 제목 계층, 본문, 표, 주석, 검토 체크리스트가 깨지지 않도록 구성한다.
+- 기본 여백과 페이지 흐름을 우선하며, 불필요한 빈 페이지가 생성되지 않도록 한다.
+- 표가 한 페이지에서 과도하게 깨질 경우 표를 분리하거나 요약 표와 상세 표로 나눈다.
+- Word 세부 규격은 `specs/word-base.md`를 기준으로 하며, 규격이 부족한 경우 `DESIGN.md`의 공통 문서 안정성 규칙을 따른다.
+
+### 6. Table Stability Rules
 
 표가 깨지지 않도록 아래 기준을 따른다.
 
@@ -274,7 +320,7 @@ PPT 디자인을 직접 생성할 때는 다음을 지킨다.
 - 비고:
 ```
 
-### 6. Long Document Rules
+### 7. Long Document Rules
 
 긴 문서를 작성할 때는 한 번에 완성본을 만들지 않고, 아래 순서로 작성한다.
 
@@ -287,7 +333,7 @@ PPT 디자인을 직접 생성할 때는 다음을 지킨다.
 긴 문서는 한 응답에 모두 압축하지 않는다.  
 문서가 길어질 경우 섹션 단위로 나누어 작성한다.
 
-### 7. Content Fidelity Rules
+### 8. Content Fidelity Rules
 
 문서 작성 시 제공되지 않은 내용은 임의로 만들지 않는다.
 
@@ -296,7 +342,7 @@ PPT 디자인을 직접 생성할 때는 다음을 지킨다.
 - 자료가 없는 경우 `추가 확인 필요` 또는 `자료 미제공`으로 표시한다.
 - 디자인을 위해 내용을 과장하거나 의미를 바꾸지 않는다.
 
-### 8. Safe Default Output
+### 9. Safe Default Output
 
 사용자가 별도 형식을 지정하지 않은 경우 기본 출력은 아래 기준을 따른다.
 
@@ -308,7 +354,7 @@ Structure: 제목 → 요약 → 본문 → 표 또는 목록 → 검토사항
 Logo: 필요 시 assets/logos/ 상대 경로 사용
 ```
 
-### 9. Do Not Generate
+### 10. Do Not Generate
 
 아래 항목은 생성하지 않는다.
 
