@@ -272,6 +272,6 @@ PPT, Word, Excel, HTML 등 수정 가능한 산출물에서는 로고와 원본 
 
 | 항목 | 내용 |
 |---|---|
-| Version | v1.0.0 |
+| Version | alpha |
 | Revision | 2026.07.07 |
 | Last Updated | 2026.07.07 |
